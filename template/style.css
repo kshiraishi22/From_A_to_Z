@@ -111,3 +111,15 @@ a:hover{
 .product-rating {
   margin-bottom: 1rem;
 }
+
+/* Sidebar */
+
+.brand button {
+  font-size: 3rem;
+  padding: .5rem;
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+   
+}
