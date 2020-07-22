@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+import data from "./data";
 import './App.css';
 
 function App() {
@@ -40,86 +40,21 @@ function App() {
     <main className="main">
       <div className="content">
         <ul className="products">
-          <li>
-            <div className="product">
-              <img className="product-image" src="/images/red_sneakers.jpg" alt="product" />
-              <div className="product-name"></div>
-                <a href="product.html">Red Sneakers</a>
-              <div className="product-brand">Vans</div>
-              <div className="product-price">$40</div>
-              <div className="product-rating">4.5 Stars (10 reviews)</div>
-            </div>
-          </li>
-          <li>
-            <div className="product">
-              <img className="product-image" src="/images/red_sneakers.jpg" alt="product" />
-              <div className="product-name"></div>
-                <a href="product.html">Red Sneakers</a>
-              <div className="product-brand">Vans</div>
-              <div className="product-price">$40</div>
-              <div className="product-rating">4.5 Stars (10 reviews)</div>
-            </div>
-          </li>
-          <li>
-            <div className="product">
-              <img className="product-image" src="/images/red_sneakers.jpg" alt="product" />
-              <div className="product-name"></div>
-                <a href="product.html">Red Sneakers</a>
-              <div className="product-brand">Vans</div>
-              <div className="product-price">$40</div>
-              <div className="product-rating">4.5 Stars (10 reviews)</div>
-            </div>
-          </li>
-          <li>
-            <div className="product">
-              <img className="product-image" src="/images/red_sneakers.jpg" alt="product" />
-              <div className="product-name"></div>
-                <a href="product.html">Red Sneakers</a>
-              <div className="product-brand">Vans</div>
-              <div className="product-price">$40</div>
-              <div className="product-rating">4.5 Stars (10 reviews)</div>
-            </div>
-          </li>
+          {
+            data.products.map(product => 
             <li>
               <div className="product">
-                <img className="product-image" src="/images/red_sneakers.jpg" alt="product" />
+                <img className="product-image" src={product.image} alt="product" />
                 <div className="product-name"></div>
-                  <a href="product.html">Red Sneakers</a>
-                <div className="product-brand">Vans</div>
-                <div className="product-price">$40</div>
-                <div className="product-rating">4.5 Stars (10 reviews)</div>
+                  <a href="product.html">{product.name}</a>
+                <div className="product-brand">{product.brand}</div>
+                <div className="product-price">{product.price}</div>
+                <div className="product-rating">{product.rating} Stars ({product.numReviews})</div>
               </div>
-          </li>
-            <li>
-              <div className="product">
-                <img className="product-image" src="/images/red_sneakers.jpg" alt="product" />
-                <div className="product-name"></div>
-                  <a href="product.html">Red Sneakers</a>
-                <div className="product-brand">Vans</div>
-                <div className="product-price">$40</div>
-                <div className="product-rating">4.5 Stars (10 reviews)</div>
-              </div>
-            </li>
-          <li>
-            <div className="product">
-              <img className="product-image" src="/images/red_sneakers.jpg" alt="product" />
-              <div className="product-name"></div>
-                <a href="product.html">Red Sneakers</a>
-              <div className="product-brand">Vans</div>
-              <div className="product-price">$40</div>
-              <div className="product-rating">4.5 Stars (10 reviews)</div>
-            </div>
-          </li>
-          <li>
-            <div className="product">
-              <img className="product-image" src="/images/red_sneakers.jpg" alt="product" />
-              <div className="product-name"></div>
-                <a href="product.html">Red Sneakers</a>
-              <div className="product-brand">Vans</div>
-              <div className="product-price">$40</div>
-              <div className="product-rating">4.5 Stars (10 reviews)</div>
-            </div>
-          </li>
+            </li>)
+          }
+          
+          
         </ul>
       </div>
     </main>
