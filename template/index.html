@@ -11,7 +11,7 @@
   <div class="grid-container" >
     <header class="header">
       <div class="brand">
-        <button>
+        <button onclick="openMenu()">
           &#9776;
         </button>
         <a href="index.html">From A to Z</a>
@@ -21,6 +21,18 @@
         <a href="signin.html">Signin</a>
       </div>
     </header>
+    <aside class="sidebar">
+      <h3>Shopping Categories</h3>
+      <button class="sidebar-close-button" onclick="closeMenu()">X</button>
+      <ul>
+        <li>
+          <a href="index.html">Sneakers</a>
+        </li>
+        <li>
+          <a href="index.html">Basketball Shoes</a>
+        </li>
+      </ul>
+    </aside>
     <main class="main">
       <div class="content">
         <ul class="products">
@@ -111,5 +123,13 @@
       All rights reserved.
     </footer>
   </div>
+  <script>
+    function openMenu() {
+      document.querySelector(".sidebar").classList.addClass("open");
+    }
+    function closeMenu() {
+      document.querySelector(".sidebar").classList.removeclass("remove");
+    }
+  </script>
 </body>
 </html>
