@@ -1,5 +1,7 @@
 export default {
   products: [{
+    
+    id: '1',
     name: "Red Sneakers",
     category: "tennis shoes",
     image: "/images/red_sneakers.jpg",
@@ -9,6 +11,7 @@ export default {
     numReviews: 234,
   },
   {
+    id: '2',
     name: "Blue Sneakers",
     category: "tennis shoes",
     image: "/images/red_sneakers.jpg",
@@ -18,6 +21,7 @@ export default {
     numReviews: 100,
   },
   {
+    id: '3',
     name: "White basketball shoes",
     category: "sports",
     image: "/images/red_sneakers.jpg",
